@@ -1,0 +1,17 @@
+body{
+    background-color: grey 6000;
+    margin: auto;
+    padding: 0;
+}
+.contenedor-general{
+  display: flex;
+  gap: 20px; /* espacio entre tarjetas */
+  justify-content: center;
+}
+
+.card{
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+}
