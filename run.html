@@ -1,0 +1,24 @@
+{% extends "game_base.html" %}
+
+{% block title %}Run &amp; Choose · English Panda Games{% endblock %}
+
+{% block content %}
+<!-- ================= GAME 2: RUN & CHOOSE ================= -->
+<section id="page-run" class="page active" aria-label="Run and Choose">
+  <div class="gamebar" data-bar="run"></div>
+  <div class="qbar">
+    <h2 class="run-q"></h2>
+    <div class="run-chips"><span class="chip c0"></span><span class="chip c1"></span><span class="chip c2"></span></div>
+  </div>
+  <div class="stage"><canvas id="runCv" aria-label="Run and Choose game"></canvas></div>
+  <div class="run-ctrl">
+    <button data-run="left" aria-label="Move left">◀</button>
+    <button data-run="dash">SPRINT (hold)</button>
+    <button data-run="right" aria-label="Move right">▶</button>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/run.js') }}"></script>
+{% endblock %}

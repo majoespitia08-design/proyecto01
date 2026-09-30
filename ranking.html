@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ranking · English Panda Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/pages.css">
+</head>
+<body>
+<main class="page active" aria-label="Ranking">
+  <div class="rank-wrap">
+    <div class="rank-top">
+      <a class="pill" href="/">← Home</a>
+      <a class="pill" href="/login" id="rkLogin">Log in</a>
+    </div>
+    <h1 class="rank-title">🏆 Ranking</h1>
+    <p class="rank-me" id="rkMe"></p>
+    <div class="rank-scroll">
+      <table class="rank-table">
+        <thead><tr><th>#</th><th>Player</th><th>XP</th><th>Games</th></tr></thead>
+        <tbody id="rkBody"><tr><td colspan="4">Loading…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+<script src="/static/js/ranking.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block shared %}
+<!-- shared: feedback banner + results -->
+<div id="fx" aria-live="polite"><div class="fx-title"></div><div class="fx-lines"></div><div class="fx-combo"></div></div>
+
+<div id="results" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="resTitle">
+  <div class="res-card">
+    <div class="rp" data-panda></div>
+    <h2 id="resTitle">GAME COMPLETE!</h2>
+    <p class="res-note" id="resNote"></p>
+    <dl class="res-grid" id="resGrid"></dl>
+    <div class="res-actions" id="resMain">
+      <button class="primary" data-act="again">PLAY AGAIN</button>
+      <button data-act="change">CHANGE GAME</button>
+      <button data-act="home">HOME</button>
+    </div>
+    <div class="res-actions hidden" id="resPick">
+      <a class="pick-vio" href="{{ url_for('surprise') }}">🎁 SURPRISE BALL</a>
+      <a class="pick-grn" href="{{ url_for('run') }}">🏃 RUN &amp; CHOOSE</a>
+      <a class="pick-org" href="{{ url_for('shot') }}">🎯 PANDA SHOT</a>
+      <button data-act="back-results">← Back</button>
+    </div>
+  </div>
+</div>
+{% endblock %}

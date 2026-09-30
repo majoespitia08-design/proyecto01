@@ -1,0 +1,32 @@
+{% extends "game_base.html" %}
+
+{% block title %}Surprise Ball · English Panda Games{% endblock %}
+
+{% block content %}
+<!-- ================= GAME 1: SURPRISE BALL ================= -->
+<section id="page-surprise" class="page active" aria-label="Surprise Ball">
+  <div class="gamebar" data-bar="surprise"></div>
+  <div class="stage sb-stage">
+    <div class="sb-scene">
+      <p class="sb-prompt">Pick a ball!</p>
+      <div class="sb-box">
+        <div class="flap l"></div><div class="flap r"></div>
+        <div class="box-back"></div>
+        <div class="sb-panda" data-panda></div>
+        <div class="box-balls"></div>
+        <div class="box-front"><span class="box-label">SURPRISE</span></div>
+        <div class="box-rim"></div>
+      </div>
+    </div>
+    <div class="sb-card hidden">
+      <div class="sb-mini">!</div>
+      <h2 class="sb-q"></h2>
+      <div class="sb-opts"></div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/surprise.js') }}"></script>
+{% endblock %}

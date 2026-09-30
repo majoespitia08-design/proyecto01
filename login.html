@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Log in · English Panda Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/pages.css">
+</head>
+<body>
+<main class="auth-wrap">
+  <form class="auth-card" data-auth="login" autocomplete="on">
+    <h1>Welcome back!</h1>
+    <p>Log in to keep collecting XP.</p>
+    <label>Username
+      <input name="username" type="text" autocomplete="username" required>
+    </label>
+    <label>Password
+      <input name="password" type="password" autocomplete="current-password" required>
+    </label>
+    <p class="auth-msg" role="alert"></p>
+    <button class="auth-btn" type="submit">LOG IN</button>
+    <p class="auth-alt">New here? <a href="/register">Register</a> · <a href="/">Home</a></p>
+  </form>
+</main>
+<script src="/static/js/auth.js"></script>
+</body>
+</html>

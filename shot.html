@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Panda Shot · English Panda Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/pages.css">
+</head>
+<body data-home="/">
+
+<!-- ================= GAME 3: PANDA SHOT ================= -->
+<section id="page-shot" class="page active" aria-label="Panda Shot">
+  <div class="gamebar" data-bar="shot"></div>
+  <div class="qbar"><h2 class="shot-q"></h2></div>
+  <div class="stage"><canvas id="shotCv" aria-label="Panda Shot game"></canvas></div>
+</section>
+
+<!-- shared: feedback banner + results -->
+<div id="fx" aria-live="polite"><div class="fx-title"></div><div class="fx-lines"></div><div class="fx-combo"></div></div>
+
+<div id="results" class="overlay hidden" role="dialog" aria-modal="true" aria-labelledby="resTitle">
+  <div class="res-card">
+    <div class="rp" data-panda></div>
+    <h2 id="resTitle">GAME COMPLETE!</h2>
+    <p class="res-note" id="resNote"></p>
+    <dl class="res-grid" id="resGrid"></dl>
+    <div class="res-actions" id="resMain">
+      <button class="primary" data-act="again">PLAY AGAIN</button>
+      <button data-act="change">CHANGE GAME</button>
+      <button data-act="home">HOME</button>
+    </div>
+    <div class="res-actions hidden" id="resPick">
+      <a class="pick-vio" href="/surprise">🎁 SURPRISE BALL</a>
+      <a class="pick-grn" href="/run">🏃 RUN &amp; CHOOSE</a>
+      <a class="pick-org" href="/shot">🎯 PANDA SHOT</a>
+      <button data-act="back-results">← Back</button>
+    </div>
+  </div>
+</div>
+
+<script src="/static/js/core.js"></script>
+<script src="/static/js/shot.js"></script>
+</body>
+</html>

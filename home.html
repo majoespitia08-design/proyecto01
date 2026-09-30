@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}English Panda Games{% endblock %}
+
+{% block content %}
+<!-- ================= HOME / MAIN MENU ================= -->
+<main id="page-home" class="page active" aria-label="English Panda Games home">
+  <div class="home">
+    <section class="hero">
+      <div class="hero-panda" data-panda role="img" aria-label="Panda mascot"></div>
+      <div class="hero-panel">
+        <h1>English Panda Games</h1>
+        <p class="sub">Answer fast, earn XP and keep up with the panda.</p>
+
+        <div class="row">
+          <span class="lvl-label" id="lvlLabel">English level</span>
+          <div class="levels" role="group" aria-labelledby="lvlLabel">
+            <button class="lvl" data-level="A1" aria-pressed="true">A1</button>
+            <button class="lvl" data-level="A2" aria-pressed="false">A2</button>
+            <button class="lvl" data-level="B1" aria-pressed="false">B1</button>
+            <button class="lvl" data-level="B2" aria-pressed="false">B2</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <span class="xp-chip">⭐ <b id="homeXP">0</b> XP</span>
+        </div>
+
+        <div class="progress">
+          <div class="meta"><span id="rankName">Panda Cub</span><span id="rankNext"></span></div>
+          <div class="bar" role="progressbar" aria-label="General progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="rankBar"><i id="rankFill"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards" aria-label="Games">
+      <article class="card c-surprise">
+        <div class="art" aria-hidden="true">
+          <span class="ball-mini" style="left:22%;top:26px;--a:#ff8a7a;--b:#e2432f"></span>
+          <span class="ball-mini" style="left:42%;top:12px;--a:#ffe27a;--b:#f0a800"></span>
+          <span class="ball-mini" style="left:62%;top:28px;--a:#8fe6ff;--b:#1d9bd1"></span>
+          <span class="crate"></span>
+        </div>
+        <div class="body">
+          <h3>🎁 SURPRISE BALL</h3>
+          <div class="tag">Pick. Think. Answer.</div>
+          <p>The panda takes a ball from a 3D box and a surprise question pops out. Answer before the timer ends.</p>
+          <a class="play" href="{{ url_for('surprise') }}">PLAY</a>
+        </div>
+      </article>
+
+      <article class="card c-run">
+        <div class="art" aria-hidden="true">
+          <span class="road"></span>
+          <span class="gate" style="left:24%;background:#ff6b57">A</span>
+          <span class="gate" style="left:calc(50% - 23px);background:#ffc83d;bottom:30px">B</span>
+          <span class="gate" style="right:24%;background:#7a5cff;color:#fff">C</span>
+        </div>
+        <div class="body">
+          <h3>🏃 RUN &amp; CHOOSE</h3>
+          <div class="tag">Run. Avoid. Choose. Score!</div>
+          <p>Run down the track, dodge the obstacles and dash through the gate with the correct English answer.</p>
+          <a class="play" href="{{ url_for('run') }}">PLAY</a>
+        </div>
+      </article>
+
+      <article class="card c-shot">
+        <div class="art" aria-hidden="true">
+          <span class="tgt" style="left:16%;top:14px;width:64px;height:64px"></span>
+          <span class="tgt" style="left:calc(50% - 32px);top:38px;width:76px;height:76px"></span>
+          <span class="tgt" style="right:14%;top:12px;width:64px;height:64px"></span>
+        </div>
+        <div class="body">
+          <h3>🎯 PANDA SHOT</h3>
+          <div class="tag">Aim. Throw. Learn!</div>
+          <p>Six 3D targets, one question. Aim and throw the ball at the correct answer before it moves away.</p>
+          <a class="play" href="{{ url_for('shot') }}">PLAY</a>
+        </div>
+      </article>
+    </section>
+  </div>
+</main>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+{% endblock %}
